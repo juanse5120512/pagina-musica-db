@@ -2,7 +2,7 @@
 require_once './libs/smarty-4.2.1/libs/Smarty.class.php';
 require_once './app/helper/authhelper.php';
 
-class NuevaView {
+class NuevaView{
     private $smarty;
 
     public function __construct() {
@@ -21,7 +21,7 @@ class NuevaView {
     }
 
     public function showSongByid_v($song){
-        $this->smart->assign('song', $song);
+        $this->smarty->assign('cancion', $song);
         $this->smarty->display('show_song.tpl');
     }
 

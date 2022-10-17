@@ -17,12 +17,14 @@ class NuevoController {
     }
 
     public function showSongs_albums_c(){
+        session_start();
         $songs = $this->modelSong->getAllSongs_m();
         $albums = $this->modelAlbum->getAllAlbums_m();
         $this->view->showSongs_albums_v($songs, $albums);
     }
 
     public function showAlbums_c(){
+        session_start();
         $albums = $this->modelAlbum->getAllAlbums_m();
         $this->view->showAlbums_v( $albums);
     }
