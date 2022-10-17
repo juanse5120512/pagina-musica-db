@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 15-10-2022 a las 01:42:57
+-- Tiempo de generación: 17-10-2022 a las 19:35:41
 -- Versión del servidor: 10.4.24-MariaDB
 -- Versión de PHP: 7.4.29
 
@@ -39,8 +39,9 @@ CREATE TABLE `albums_db` (
 --
 
 INSERT INTO `albums_db` (`id`, `artista`, `nombre`, `anio`) VALUES
-(13, 'Duki', 'Desde el fin del mundo', 1988),
-(14, 'The Beatles', 'Abbey road', 1983);
+(16, 'The beatles', 'Abbey road', 1969),
+(17, 'Led zeppelin', 'Physical Graffiti', 1975),
+(19, 'Pink Floyd', 'The wall', 1979);
 
 -- --------------------------------------------------------
 
@@ -62,8 +63,10 @@ CREATE TABLE `canciones_db` (
 --
 
 INSERT INTO `canciones_db` (`id`, `genero`, `anio`, `banda`, `album`, `nombre`) VALUES
-(13, 'Trap', 1988, 'Duki', 13, 'No me llores'),
-(14, 'Rock', 1983, 'Cerati', 14, 'Let it be');
+(17, 'Rock', 1969, 'The beatles', 16, 'Here comes the sun'),
+(18, 'Rock', 1975, 'Led zeppelin', 17, 'Night Flight'),
+(19, 'Rock', 1969, 'The beatles', 16, 'Come together'),
+(22, 'Rock', 1979, 'Pink Floyd', 19, 'Another brick in the wall');
 
 -- --------------------------------------------------------
 
@@ -82,7 +85,8 @@ CREATE TABLE `users_db` (
 --
 
 INSERT INTO `users_db` (`id`, `email`, `contraseña`) VALUES
-(1, 'agustinperez@hotmail.com', '$2a$12$SSx7lQqQhQmECchd243o.u7x1zDbP4QhogISXNr74OKm/G3wFNaeG');
+(1, 'agustinperez@hotmail.com', '$2a$12$SSx7lQqQhQmECchd243o.u7x1zDbP4QhogISXNr74OKm/G3wFNaeG'),
+(2, 'tatycardoso@hotmail.com', '$2a$12$UQG.e.NuzDGc/7IBO2nz3OGc/twKmIvQAzi2Zbs/szEPbqyUyKqZC');
 
 --
 -- Índices para tablas volcadas
@@ -115,19 +119,19 @@ ALTER TABLE `users_db`
 -- AUTO_INCREMENT de la tabla `albums_db`
 --
 ALTER TABLE `albums_db`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT de la tabla `canciones_db`
 --
 ALTER TABLE `canciones_db`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
 -- AUTO_INCREMENT de la tabla `users_db`
 --
 ALTER TABLE `users_db`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- Restricciones para tablas volcadas
