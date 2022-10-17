@@ -1,10 +1,10 @@
 {include file="header.tpl"}
 
 
-<div style="display: flex; justify-content:space-around; margin:20px;">
+<div>
     {foreach from=$albums item=$album}  
         
-        <a href="songbyalbum/{$album->id}" class="btn btn-primary" style="text-decoration:underline ;">{$album->nombre}</a>
+        <a href="songbyalbum/{$album->id}" class="btn btn-primary">{$album->nombre}</a>
         
         {if isset($smarty.session.USER_ID)}
         <a href="deleteAlbum/{$album->id}" class="btn btn-danger">Eliminar</a>

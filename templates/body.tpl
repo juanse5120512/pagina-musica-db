@@ -1,12 +1,12 @@
 {include file="header.tpl"}
-<div style="display: flex; justify-content:space-around;">
+<div>
 {foreach from=$canciones item=$cancion}
     <div class="card" style="width: 18rem; margin: 10px;">
         <div class="card-body">
             <h5 class="card-title">Cancion: {$cancion->nombre}</h5>
             {foreach from=$albums item=$album} 
                 {if $cancion->album == $album->id}
-                    <p> {$album->nombre} </p>
+                    <p> Album: {$album->nombre} </p>
                 {{/if}}
             {/foreach}
             <p class="card-text">Año: {$cancion->anio}</p>
