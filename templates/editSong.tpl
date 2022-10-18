@@ -11,7 +11,7 @@
             <option value="{$album->id}">{$album->nombre}</option>
         {/foreach}
     </select>
-    <button type="button" class="btn btn-secondary">Editar</button>
+    <button type="submit" class="btn btn-secondary">Editar</button>
 </form>
 
 {include file="footer.tpl"}
