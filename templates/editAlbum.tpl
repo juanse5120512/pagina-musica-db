@@ -1,11 +1,11 @@
 {include file="header.tpl"}
 
 <form action="editAlbum" method="POST">
-    Nombre<input class="form-control" type="text" name="nombre">    
-    Artista<input class="form-control" type="text" name="artista">
-    Año<input class="form-control" type="text" name="anio">
+    <input class="form-control inputs-editsongalbum" type="text" name="nombre" placeholder="Nombre">    
+    <input class="form-control inputs-editsongalbum" type="text" name="artista" placeholder="Artista">
+    <input class="form-control inputs-editsongalbum" type="text" name="anio" placeholder="Año">
     <input name="id" value="{$album->id}" style=display:none>
-    <button type="submit">Editar Album</button>
+    <button type="button" class="btn btn-secondary inputs-editsongalbum">Editar</button>
 </form>
 
 {include file="footer.tpl"}
